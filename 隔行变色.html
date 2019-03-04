@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .news {
+            margin: auto;
+            width: 300px;
+            text-align: center;
+
+        }
+
+        .news li {
+            padding: 2px 5px;
+            font-size: 15px;
+            height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+
+        .hover {
+            background: rgb(7, 255, 193);
+
+        }
+
+        .bg0 {
+            background: #bf05f8;
+        }
+
+        .bg1 {
+            background: #b3ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="news" class="news">
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+        <li>为创新人才当好“接线员” 提建议有股“执拗劲”</li>
+    </ul>
+
+    <script>
+        var news = document.getElementById('news');
+        var list = news.getElementsByTagName('li');
+        for (var i = 0; i < list.length; i++) {
+            // list[i].className = `bg${i%2}`;
+            // list[i].ind = i;
+            // list[i].onmouseover = function() {
+            //     this.className='hover';
+            // }
+            // list[i].onmouseout = function() {
+            //     this.className = `bg${this.ind%2}`;
+            // }
+            var c = `bg${i%2}`;
+            list[i].className = c;
+            list[i].c = c;
+            list[i].onmouseover = function () {
+                this.className = 'hover';
+            }
+            list[i].onmouseout = function () {
+                this.className = this.c;
+            }
+        }
+    </script>
+</body>
+
+</html>
